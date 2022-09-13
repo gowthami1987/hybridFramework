@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Sample Suite">
+    <test name="testing">
+        <classes>
+            <class name="HybridExecuteTest" />
+        </classes>
+    </test>
+
+</suite>
