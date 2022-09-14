@@ -28,7 +28,6 @@ public class HybridExecuteTest {
         ReadObject object = new ReadObject();
         Properties allObjects =  object.getObjectRepository();
         UIOperation operation = new UIOperation(webdriver);
-        //Call perform function to perform operation on UI
         operation.perform(allObjects, keyword, objectName,
                 objectType, value);
 
@@ -43,12 +42,10 @@ public class HybridExecuteTest {
         int rowCount = guru99Sheet.getLastRowNum()-guru99Sheet.getFirstRowNum();
         object = new Object[rowCount][5];
         for (int i = 0; i < rowCount; i++) {
-            //Loop over all the rows
             Row row = guru99Sheet.getRow(i+1);
-            //Create a loop to print cell values in a row
             for (int j = 0; j < row.getLastCellNum(); j++) {
-                //Print excel data in console
                 object[i][j] = row.getCell(j).toString();
+                System.out.println(object[i][j]);
             }
 
         }

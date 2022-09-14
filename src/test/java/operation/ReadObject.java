@@ -11,9 +11,7 @@ public class ReadObject {
 	Properties p = new Properties();
  
 	public Properties getObjectRepository() throws IOException{
-		//Read object repository file
 		InputStream stream = new FileInputStream("/src/test/java/objects/object.properties");
-		//load all objects
 		p.load(stream);
 		 return p;
 	}
