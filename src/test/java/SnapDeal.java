@@ -27,8 +27,8 @@ public class SnapDeal {
         options.merge(capabilities);
         ChromeDriver driver = new ChromeDriver(options);
         System.out.println("open browser");
-        driver.get("https://www.google.com");
-        this.takeSnapShot(driver, "/Users/ini/Documents/HybridFramework/test.png") ;
+        driver.get("https://www.gmail.com");
+        this.takeSnapShot(driver, System.getProperty("user.dir")+"/"+"test.png") ;
 
     }
     public void takeSnapShot(WebDriver webdriver,String fileWithPath) {
