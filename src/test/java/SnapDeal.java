@@ -4,6 +4,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -13,8 +15,19 @@ public class SnapDeal {
     @Test
     public void Test1() {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get("https://www.snapdeal.com");
+       /* DesiredCapabilities cap = new DesiredCapabilities();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("start-maximized");
+         driver = new ChromeDriver(options);
+        //driver = new ChromeDriver();*/
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("something", true);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.merge(capabilities);
+        ChromeDriver driver = new ChromeDriver(options);
+        System.out.println("open browser");
+        driver.get("https://www.google.com");
         this.takeSnapShot(driver, "/Users/ini/Documents/HybridFramework/test.png") ;
 
     }
