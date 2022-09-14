@@ -39,10 +39,7 @@ public class HybridExecuteTest {
     public Object[][] getDataFromDataprovider() throws IOException{
         Object[][] object = null;
         ReadGuru99ExcelFile file = new ReadGuru99ExcelFile();
-
-        //Read keyword sheet
-        Sheet guru99Sheet = file.readExcel("/Users/ini/Documents/HybridFramework/src/TestCase.xlsx" , "KeywordFramework");
-        //Find number of rows in excel file
+        Sheet guru99Sheet = file.readExcel("/src/TestCase.xlsx" , "KeywordFramework");
         int rowCount = guru99Sheet.getLastRowNum()-guru99Sheet.getFirstRowNum();
         object = new Object[rowCount][5];
         for (int i = 0; i < rowCount; i++) {

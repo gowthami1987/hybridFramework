@@ -12,7 +12,7 @@ public class ReadObject {
  
 	public Properties getObjectRepository() throws IOException{
 		//Read object repository file
-		InputStream stream = new FileInputStream("/Users/ini/Documents/HybridFramework/src/test/java/objects/object.properties");
+		InputStream stream = new FileInputStream("/src/test/java/objects/object.properties");
 		//load all objects
 		p.load(stream);
 		 return p;
