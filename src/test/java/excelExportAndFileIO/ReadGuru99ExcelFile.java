@@ -11,8 +11,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadGuru99ExcelFile {
 	
-	public Sheet readExcel(String filePath,String sheetName) throws IOException{
-	File file =	new File(filePath);
+	public Sheet readExcel(String filePath,String fileName,String sheetName) throws IOException{
+		File file =	new File(filePath+fileName);
 	FileInputStream inputStream = new FileInputStream(file);
 	Workbook guru99Workbook = null;
 

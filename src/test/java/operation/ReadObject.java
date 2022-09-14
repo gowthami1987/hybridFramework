@@ -11,7 +11,7 @@ public class ReadObject {
 	Properties p = new Properties();
  
 	public Properties getObjectRepository() throws IOException{
-		InputStream stream = new FileInputStream("/src/test/java/objects/object.properties");
+		InputStream stream = new FileInputStream(new File(System.getProperty("user.dir")+"/src/test/java/objects/object.properties"));
 		p.load(stream);
 		 return p;
 	}
