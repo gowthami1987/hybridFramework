@@ -31,7 +31,7 @@ public class SnapDeal {
         System.out.println("open browser");*/
         log.info("open browser");
         driver=new ChromeDriver();
-        driver.get("https://www.gmail.com");
+        driver.get("https://www.snapdeal.com");
         this.takeSnapShot(driver, System.getProperty("user.dir")+"/"+"test.png") ;
         driver.close();
 
