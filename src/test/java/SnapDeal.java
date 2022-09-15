@@ -18,7 +18,7 @@ public class SnapDeal {
      Logger log = Logger.getLogger(String.valueOf(SnapDeal.class));
     @Test
     public void Test1() {
-        PropertyConfigurator.configure("/HybridFramework/src/test/java/objects/log4j.properties");
+        PropertyConfigurator.configure(System.getProperty("user.dir")+"/"+"src/test/java/objects/log4j.properties");
 
         WebDriverManager.chromedriver().setup();
 
